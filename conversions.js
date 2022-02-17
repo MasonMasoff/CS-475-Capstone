@@ -5,22 +5,8 @@ function textToBinary(string) {
     }).join(' ');
 }
 
-//  Function that takes binary as input, outputs a decimal conversion
-function binaryToDecimal(string) {
-    let decimal = +0;
-    let bits = +1;
-    for(let i = 0; i < string.length; i++) {
-        let currNum = +(string[string.length - i - 1]);
-        if(currNum === 1) {
-            decimal += bits;
-        }
-        bits *= 2;
-    }
-    return(decimal);
-}
-
 //  Function to take a string, remove the space, and put the sequences in a list
-function stringToList(string) {
+function toList(string) {
     var result = string.split(' ');
     return result;
 }
@@ -35,9 +21,39 @@ function binaryListToDecimal(list) {
     return s;
 }
 
+//  Function that takes binary as input, outputs a decimal conversion
+function binaryToDecimal(string) {
+    let decimal = +0;
+    let bits = +1;
+    for(let i = 0; i < string.length; i++) {
+        let currNum = +(string[string.length - i - 1]);
+        if(currNum === 1) {
+            decimal += bits;
+        }
+        bits *= 2;
+    }
+    return(decimal);
+}
+
 // Tests
 console.log('Testing:');
+
+console.log('Expected: Hello in binary');
 var tempTestVar = textToBinary('Hello');
 console.log(tempTestVar)
-var temp = binaryListToDecimal(stringToList(tempTestVar));
-console.log(temp);
+
+console.log('Expected: Binary into list');
+tempTestVar = toList(tempTestVar);
+console.log(tempTestVar);
+
+console.log('Expected: Binary to Decimal')
+tempTestVar = binaryListToDecimal(tempTestVar);
+console.log(tempTestVar);
+
+console.log('Expected: Decimal List');
+testTempVar = toList(tempTestVar);
+console.log(testTempVar);
+
+
+
+
