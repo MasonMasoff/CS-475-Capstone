@@ -28,9 +28,12 @@ function stringToList(string) {
 }
 
 function binaryListToDecimal(list) {
+    var s = '';
     for (var i = 0; i < list.length; i++) {
-        console.log(binaryToDecimal(list[i]));
+        s += binaryToDecimal(list[i]) + ' ';
     }
+    // console.log(s);
+    return s;
 }
 // Tests
 console.log('Testing:');
