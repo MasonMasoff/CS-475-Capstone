@@ -5,6 +5,12 @@ function textToBinary(string) {
     }).join(' ');
 }
 
+ // Function to take a string, remove the space, and put the sequences in a list
+function stringToList(string) {
+    var result = string.split(' ');
+    return result;
+}
+
 // Function that takes binary as input, outputs a decimal conversion
  function binaryToDecimal(string) {
     let decimal = +0;
@@ -19,17 +25,29 @@ function textToBinary(string) {
     return(decimal);
 }
 
-// NEED to have the binaryToDecimal be able to take in multiple strings for more than one number
-// EX: 1001000 1100101 1101100 1101100 1101111
-// EX: 72 101 108 108 111
+function binaryListToDecimal(list) {
+    console.log(`The length of this list is ${list.length}`);
+    for(var i = 0; i < list.length; i++) {
+        console.log(`This has ran ${i} times!`)
+    };
+}
 
 // Tests
 //      Text to Binary
 console.log('Text To Binary:');
 console.log(textToBinary('Hello'));
-
 console.log('\n');
 
 //      Binary to Decimal
 console.log('Binary to Decimal:');
 console.log(binaryToDecimal('1001000'));
+console.log('\n');
+
+//      Binary String to List
+var binaryStringToList1 = textToBinary('Hello)');
+console.log('Binary String to List:');
+console.log(stringToList(binaryStringToList1));
+console.log('\n');
+
+// Temp Testing
+binaryListToDecimal(stringToList(binaryStringToList1));
