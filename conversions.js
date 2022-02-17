@@ -1,3 +1,10 @@
+// Tools
+//  Function to take a string, remove the space, and put the sequences in a list
+function toList(string) {
+    var result = string.split(' ');
+    return result;
+}
+
 //  Function that takes a string as input, outputs a binary conversion
 function textToBinary(string) {
     return string.split('').map(function (char) {
@@ -5,13 +12,7 @@ function textToBinary(string) {
     }).join(' ');
 }
 
-//  Function to take a string, remove the space, and put the sequences in a list
-function toList(string) {
-    var result = string.split(' ');
-    return result;
-}
-
-//  Function that takes a list of binary sequences, returns that list in decimal form
+//  Function that takes a string of binary values, returns that list in decimal form
 function binaryListToDecimal(list) {
     var s = '';
     for (var i = 0; i < list.length; i++) {
@@ -21,7 +22,7 @@ function binaryListToDecimal(list) {
     return s;
 }
 
-//  Function that takes binary as input, outputs a decimal conversion
+//  Helper function that takes binary as input, outputs a decimal conversion
 function binaryToDecimal(string) {
     let decimal = +0;
     let bits = +1;
@@ -35,7 +36,19 @@ function binaryToDecimal(string) {
     return(decimal);
 }
 
-// Tests
+//  Function that takes a list of decimal values, returns that list in ASCII form
+function decimalListToASCII(list) {
+    var s = '';
+    for (var i = 0; i < list.length; i++) {
+        s += String.fromCharCode(list[i]);
+    }
+    return s;
+}
+
+//  Helper function that takes decimal numbers as input, outputs an ASCII conversion
+//      Not Needed?
+
+// Step by Step
 console.log('Testing:');
 
 console.log('Expected: Hello in binary');
@@ -51,9 +64,12 @@ tempTestVar = binaryListToDecimal(tempTestVar);
 console.log(tempTestVar);
 
 console.log('Expected: Decimal List');
-testTempVar = toList(tempTestVar);
-console.log(testTempVar);
+tempTestVar = toList(tempTestVar);
+console.log(tempTestVar);
 
+console.log('Expected: Decimal to ASCII');
+tempTestVar = decimalListToASCII(tempTestVar);
+console.log(tempTestVar);
 
 
 
