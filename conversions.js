@@ -45,9 +45,6 @@ function decimalListToASCII(list) {
     return s;
 }
 
-//  Helper function that takes decimal numbers as input, outputs an ASCII conversion
-//      Not Needed?
-
 // Step by Step
 console.log('Testing:');
 
