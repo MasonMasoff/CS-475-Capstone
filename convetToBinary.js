@@ -1,8 +1,7 @@
-function convert() {
-    var  output=document.getElementById("ti2");  
-    var input=document.getElementById("ti1").value;
-      output.value = "";
-      for (i=0; i < input.length; i++) {
-           output.value +=input[i].charCodeAt(0).toString(2) + " ";
-      }
-  }
+function text2Binary(string) {
+    return string.split('').map(function (char) {
+        return char.charCodeAt(0).toString(2);
+    }).join(' ');
+}
+
+console.log(text2Binary('Hello'));
