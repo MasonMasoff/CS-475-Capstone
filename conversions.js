@@ -29,11 +29,12 @@ function stringToList(string) {
 
 function binaryListToDecimal(list) {
     for (var i = 0; i < list.length; i++) {
-        stringToList(binaryListToDecimal(list[i]));
+        console.log(binaryToDecimal(list[i]));
     }
 }
 // Tests
 console.log('Testing:');
-var tempTestVar = textToBinary('Hello)');
-binaryListToDecimal(tempTestVar);
+var tempTestVar = textToBinary('Hello');
+console.log(tempTestVar)
+binaryListToDecimal(stringToList(tempTestVar));
 // console.log(binaryListToDecimalList(stringToList(binaryStringToList1)))
