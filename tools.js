@@ -1,8 +1,8 @@
 /*    Tools    */
-//  Function to take any string, remove the space, and put the sequences in a list
-function toList(string) {
-    var result = string.split(' ');
-    return result;
+//  Function to take any string, remove the space, and put the sequences in an array
+function toArray(string) {
+    var arr = string.split(' ');
+    return arr;
 }
 
 /*    Text to Binary    */
@@ -49,9 +49,9 @@ function decimalListToASCII(list) {
 
 // Function to convert from Binary to ASCII with one call
 function binaryToText(string) {
-    var s = toList(string);
+    var s = toArray(string);
     s = binaryListToDecimal(s);
-    s = toList(s);
+    s = toArray(s);
     s.pop();    // Removes last entry from the list just for cleaning ('')
     s = decimalListToASCII(s);
 
@@ -59,14 +59,18 @@ function binaryToText(string) {
 }
 
 // Function to take any binary sequence given, make sure it has 8 bits by adding leading zeros to it
-function binaryLengthCheck(string) {
-    var list = toList(string);
-    for(var i = 0; i < list.length; i++) {
-        while(list[i].length < 8) {
-            list[i] = '0' + list[i];
+function binaryLengthCheck(list) {
+    var arr = toArray(list);
+    var list = [];
+    console.log(`The array that we are testing for is: ${arr}`);
+    for(var i = 0; i < arr.length; i++) {
+        var temp = arr[i]
+        console.log(`The elements in this array are: ${temp}`);
+        while(temp.length < 8) {
+            temp = '0' + temp;
         }
-    } 
-    console.log(list);
+        list += temp + ' ';
+    }
     return list;
 }
 
@@ -77,25 +81,21 @@ function lastTwo(list) {
         var str = list[i];
         s += str.substring(str.length - n) + ' ';
     }
-    s = toList(s);
+    s = toArray(s);
     s.pop();        // Removes last entry from the line just for cleaning ('')
     return s;
 }
  
 /* -------------Testing------------- */
-
-var list = toList('Hello I want to be converted to a list');
-console.log(list);
-
-var ttb = textToBinary('Hello I want to be working');
-console.log(`Text to Binary:\n${ttb}`);
-
+var ttb = textToBinary('Hi');
+console.log(`'Hi' in Binary is: ${ttb}`);
 var blc = binaryLengthCheck(ttb);
 console.log(`Binary Length Check:\n${blc}`);
-console.log(typeof(blc));
+var btt = binaryToText(blc);
+console.log(`Binary to Text:\n${btt}`);
 
 
 /* -------------Testing------------- */
 
 // Imports & Exports
-export {toList, textToBinary, binaryListToDecimal, decimalListToASCII, binaryToText};
+// export {toArray as toList, textToBinary, binaryListToDecimal, decimalListToASCII, binaryToText};
