@@ -91,9 +91,6 @@ var ttb = textToBinary('Hi');
 console.log(`'Hi' in Binary is: ${ttb}`);
 var blc = binaryLengthCheck(ttb);
 console.log(`Binary Length Check:\n${blc}`);
-var btt = binaryToText(blc);
-console.log(`Binary to Text:\n${btt}`);
-
 
 /* -------------Testing------------- */
 
