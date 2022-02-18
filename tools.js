@@ -58,5 +58,19 @@ function binaryToText(string) {
     return s;
 }
 
+// Function to take any binary sequence given, make sure it has 8 bits by adding leading zeros to it
+function binaryLength(string) {
+    var temp = '';
+    var list = toList(string);
+
+    return list;
+}
+
+
+/* -------------Testing------------- */
+var list = binaryLength('10010010 10010001 10010010 100100010')
+console.log(list);
+/* -------------Testing------------- */
+
 // Imports & Exports
 export {toList, textToBinary, binaryListToDecimal, decimalListToASCII, binaryToText};
