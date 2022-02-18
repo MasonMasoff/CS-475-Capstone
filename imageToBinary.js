@@ -1,6 +1,4 @@
 //import {toList} from './tools.js';
 
-//var list = '10 10 10';
-//console.log(toList(list));
-
-console.log('HI IM HERE');
+var list = '10 10 10';
+console.log(toList(list));
