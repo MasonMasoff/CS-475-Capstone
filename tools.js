@@ -59,4 +59,4 @@ function binaryToText(string) {
 }
 
 // Imports & Exports
-export {toList};
+export {toList, textToBinary, binaryListToDecimal, decimalListToASCII, binaryToText};
