@@ -58,8 +58,11 @@ function binaryToText(string) {
     return s;
 }
 
+// Imports & Exports
+export {toList};
 
 // Testing
+/*
 // To Binary Test
 console.log('Expected: Binary')
 console.log(textToBinary('Hello World'));
@@ -75,3 +78,5 @@ console.log(binaryToText(binary));
 
 binary = textToBinary('How! is, this& punctuation* test^');
 console.log(binaryToText(binary));
+*/
+
