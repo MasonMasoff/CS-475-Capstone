@@ -60,23 +60,3 @@ function binaryToText(string) {
 
 // Imports & Exports
 export {toList};
-
-// Testing
-/*
-// To Binary Test
-console.log('Expected: Binary')
-console.log(textToBinary('Hello World'));
-
-// To ASCII Test
-console.log('Expected: ASCII')
-var binary = '1001000 1100101 1101100 1101100 1101111 100000 1010111 1101111 1110010 1101100 1100100';
-console.log(binaryToText(binary));
-
-// Random Testing
-binary = textToBinary('Hello, World');
-console.log(binaryToText(binary));
-
-binary = textToBinary('How! is, this& punctuation* test^');
-console.log(binaryToText(binary));
-*/
-
