@@ -95,4 +95,4 @@ console.log(`Binary Length Check:\n${blc}`);
 /* -------------Testing------------- */
 
 // Imports & Exports
-// export {toArray as toList, textToBinary, binaryListToDecimal, decimalListToASCII, binaryToText};
+export {toArray, textToBinary, binaryLengthCheck, lastTwo};
