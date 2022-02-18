@@ -70,9 +70,20 @@ function binaryLengthCheck(string) {
     return list;
 }
 
+function lastTwo(list) {
+    const n = 2;    // Last 2 bits we want
+    var s = '';     // String to put the last two digits into
+    for(var i = 0; i < list.length; i++) {
+        var str = list[i];
+        s += str.substring(str.length - n) + ' ';
+    }
+    s = toList(s);
+    s.pop();        // Removes last entry from the line just for cleaning ('')
+    return s;
+}
+ 
 /* -------------Testing------------- */
-var list = binaryLengthCheck('111 11111111 00000 0000')
-console.log(list);
+
 
 
 /* -------------Testing------------- */
