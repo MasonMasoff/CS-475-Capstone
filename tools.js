@@ -66,7 +66,7 @@ function binaryLengthCheck(string) {
             list[i] = '0' + list[i];
         }
     } 
-
+    console.log(list);
     return list;
 }
 
@@ -84,6 +84,15 @@ function lastTwo(list) {
  
 /* -------------Testing------------- */
 
+var list = toList('Hello I want to be converted to a list');
+console.log(list);
+
+var ttb = textToBinary('Hello I want to be working');
+console.log(`Text to Binary:\n${ttb}`);
+
+var blc = binaryLengthCheck(ttb);
+console.log(`Binary Length Check:\n${blc}`);
+console.log(typeof(blc));
 
 
 /* -------------Testing------------- */
