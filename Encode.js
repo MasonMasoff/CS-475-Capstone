@@ -68,7 +68,7 @@ function testing(string1, string2) {
     // Everything to get secretMessage up to 8 bits and into a string
     var secretMessage = textToBinary(string2);
     secretMessage = binaryLengthCheck(secretMessage);
-    // Trim the string of spaces
+    secretMessage = secretMessage.split(' ').join('');
     console.log(secretMessage);
     return 0;
 }
