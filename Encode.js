@@ -1,9 +1,10 @@
 /* This file is to:
     Encode
-    - Convert input text to binary
-    - Take the binary, make sure it is the correct length of 8, if not add 0's to the beginning
-    - Take the binary given, seperate the last two bits
-    - Convert the last two bits to a string
+    DONE - Convert input text to binary
+    DONE - Take the binary, make sure it is the correct length of 8, if not add 0's to the beginning
+    DONE - Take the binary given, seperate the last two bits
+    DONE - Convert the last two bits to a string
+    - Take the string given, 
     - Take that string, overwrite it with the text to encode
     - Split it into groups of two again
     - Append that to the end of the original binary
@@ -16,6 +17,14 @@
 function toArray(string) {
     var arr = string.split(' ');
     return arr;
+}
+
+function toList(arr) {
+    var list = '';
+    for (var i = 0; i < arr.length; i++) {
+        list += arr[i] + ' ';
+    }
+    return list;
 }
 
 /*    Text to Binary    */
@@ -56,6 +65,7 @@ function lastTwo(list) {
     return s;
 }
 
+
 function testing(string1, string2) {
     // Everything to get the last two of the example string
     var exampleString = textToBinary(string1);
@@ -63,14 +73,20 @@ function testing(string1, string2) {
     var arr = [];
     arr = toArray(exampleString);
     arr = lastTwo(arr);
-    // console.log(`Last two of exampleString:\n${arr}`);
+    exampleString = toList(arr);
+    exampleString = exampleString.split(' ').join('');
+    console.log(`exampleString:\n${exampleString}`);
 
-    // Everything to get secretMessage up to 8 bits and into a string
+    // Everything to get secretMessage up to 8 bits and into a string with no spaces
     var secretMessage = textToBinary(string2);
     secretMessage = binaryLengthCheck(secretMessage);
     secretMessage = secretMessage.split(' ').join('');
-    console.log(secretMessage);
-    return 0;
+    console.log(`secretMessage:\n${secretMessage}`);
+
+    // 
+    
+    
+    return 'end';
 }
 
 console.log(testing('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
