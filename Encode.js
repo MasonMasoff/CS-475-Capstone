@@ -83,7 +83,13 @@ function testing(string1, string2) {
     secretMessage = secretMessage.split(' ').join('');
     console.log(`secretMessage:\n${secretMessage}`);
 
-    // 
+    // Everything to put n characters of secretMessage onto example string, includes one @ symbol to signal a stop
+    var encodedMessage = '';
+    encodedMessage = secretMessage.substring(0, secretMessage.length) + '@' + exampleString.substring(secretMessage.length);
+    console.log(`encodedMessage:\n${encodedMessage}`);
+
+    // Everything to split the encodedMessage into 2's, stops at the @ symbol
+    
     
     
     return 'end';
