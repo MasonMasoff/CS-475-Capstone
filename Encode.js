@@ -37,16 +37,15 @@ function textToBinary(string) {
 /*    Binary Length Check    */
 // Function that checks the length of the binary sequence, if the sequence is < 8 in length, automatically appends 0 to the beginning until it is of length 8
 function binaryLengthCheck(list) {
-    var arr = toArray(list);
-    var list = [];
+    var arr = list;
     for(var i = 0; i < arr.length; i++) {
         var temp = arr[i];
         while(temp.length < 8) {
             temp = '0' + temp;
         }
-        list += temp + ' ';
+        arr[i] = temp;
     }
-    return list;
+    return arr;
 }
 
 /*    Last Two    */
@@ -69,9 +68,12 @@ function testing(string1, string2) {
     // Everything to get the last two of the example string
     // Everything to get a string of binary with the text given with length check and put it into an array
     var exampleString = textToBinary(string1);
-    exampleString = binaryLengthCheck(exampleString);
     exampleString = toArray(exampleString);
-    console.log(`exampleString:\n${exampleString}`);
+    console.log('exampleString:');
+    console.log(exampleString);
+    exampleString = binaryLengthCheck(exampleString);
+    console.log('exampleString 2:')
+    console.log(exampleString);
 
     /*
     arr = lastTwo(arr);
