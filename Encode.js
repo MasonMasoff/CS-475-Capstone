@@ -63,45 +63,34 @@ function lastTwo(list) {
     return s;
 }
 
+/*    replace    */
+// Function that takes textToEncode and replaces the last two bits of each element of the array with two bits at a time from secretMessage
+function replace (arr1, arr2) {
+    // console.log(arr1);
+    // console.log(arr2);
+    for (var i = 0; i < arr1.length; i++) {
+        // console.log(`arr1 length is ${arr1.length}`);
+        // console.log(`This has ran ${i} times so far`);
+    }
+}
 
-function testing(string1, string2) {
-    // Everything to get the last two of the example string
+
+function encodeString(string1, string2) {
     // Everything to get a string of binary with the text given with length check and put it into an array
-    var exampleString = textToBinary(string1);
-    exampleString = toArray(exampleString);
-    console.log('exampleString:');
-    console.log(exampleString);
-    exampleString = binaryLengthCheck(exampleString);
-    console.log('exampleString 2:')
-    console.log(exampleString);
-
-    /*
-    arr = lastTwo(arr);
-    exampleString = toList(arr);
-    exampleString = exampleString.split(' ').join('');
-    console.log(`exampleString:\n${exampleString}`);
-    */
-    
+    var textToEncode = textToBinary(string1);
+    textToEncode = toArray(textToEncode);
+    textToEncode = binaryLengthCheck(textToEncode);
 
     // Everything to get secretMessage up to 8 bits and into a string with no spaces
     var secretMessage = textToBinary(string2);
     secretMessage = binaryLengthCheck(secretMessage);
     secretMessage = secretMessage.split(' ').join('');
-    console.log(`secretMessage:\n${secretMessage}`);
 
-    // Everything to put n characters of secretMessage onto example string, includes one @ symbol to signal a stop
-    /*
-    var encodedMessage = '';
-    encodedMessage = secretMessage.substring(0, secretMessage.length) + '@' + exampleString.substring(secretMessage.length);
-    console.log(`encodedMessage:\n${encodedMessage}`);
-    */
-
-    // Testing
-    // Everything to take the list of binary from example string, iterate through that, append the secret message two bits at a time with secretMessage, and return a list of exampleMessage binary sequences
-
+    // Everything to take the array of binary from example string, iterate through that, append the secret message two bits at a time with secretMessage, and return a list of exampleMessage binary sequences
+    replace(textToEncode, secretMessage);
 
     return 'end';
 }
 
-console.log(testing('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
+console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
 
