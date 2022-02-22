@@ -79,7 +79,7 @@ function intoTwo (arr) {
 /*    replace    */
 // Function that takes textToEncode and replaces the last two bits of each element of the array with two bits at a time from secretMessage
 function replace (arr1, arr2) {
-    for (var i = 0; i < arr2.length; i++) {
+    for (var i = 0; i < arr2.length ; i++) {
         let temp = arr1[i];
         temp = arr1[i].slice(0, -2) + arr2[i];
         arr1[i] = temp;
@@ -102,6 +102,7 @@ function encodeString(string1, string2) {
     secretMessage = toArray(secretMessage);
     secretMessage = binaryLengthCheck(secretMessage);
     secretMessage = intoTwo(secretMessage);
+    secretMessage = secretMessage.slice(0,-1);
     
     console.log('secretMessage');
     console.log(secretMessage);
