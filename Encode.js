@@ -65,13 +65,17 @@ function lastTwo(list) {
 
 /*    replace    */
 // Function that takes textToEncode and replaces the last two bits of each element of the array with two bits at a time from secretMessage
-function replace (arr1, arr2) {
-    // console.log(arr1);
-    // console.log(arr2);
-    for (var i = 0; i < arr1.length; i++) {
-        // console.log(`arr1 length is ${arr1.length}`);
-        // console.log(`This has ran ${i} times so far`);
+function replace (arr, str) {
+    for (var i = 0; i < arr.length; i++) {
+        let temp = arr[i];
+        let first = 0;
+        let last = 2;
+        temp = arr[i].slice(0, -2) + str.substring(first,last);
+        first += 2;
+        last += 2;
+        arr[i] = temp;
     }
+    return arr;
 }
 
 
@@ -80,17 +84,25 @@ function encodeString(string1, string2) {
     var textToEncode = textToBinary(string1);
     textToEncode = toArray(textToEncode);
     textToEncode = binaryLengthCheck(textToEncode);
+    console.log('textToEncode');
+    console.log(textToEncode);
 
     // Everything to get secretMessage up to 8 bits and into a string with no spaces
     var secretMessage = textToBinary(string2);
     secretMessage = binaryLengthCheck(secretMessage);
     secretMessage = secretMessage.split(' ').join('');
+    console.log('secretMessage');
+    console.log(secretMessage);
 
     // Everything to take the array of binary from example string, iterate through that, append the secret message two bits at a time with secretMessage, and return a list of exampleMessage binary sequences
-    replace(textToEncode, secretMessage);
+    console.log('Replaced:');
+    console.log(replace(textToEncode, secretMessage));
+    
+    // Testing
 
     return 'end';
 }
 
-console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
+console.log(encodeString('Hello, World', 'Me'));
+//  console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
 
