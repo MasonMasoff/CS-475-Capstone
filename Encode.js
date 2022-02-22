@@ -1,10 +1,12 @@
-/*    To Array    */
+/*    toArray    */
 //  Takes a string, and turns it into an array that is deliminated by ' '
-function toArray(string) {
+function toArray(str) {
     var arr = {};
-    return arr = string.split(' ');
+    return arr = str.split(' ');
 }
 
+/*    toList    */
+// Takes an array, makes it a list with a ' ' inbetween each element
 function toList(arr) {
     var list = '';
     for (var i = 0; i < arr.length; i++) {
