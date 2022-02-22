@@ -14,8 +14,8 @@
 /*    To Array    */
 //  Takes a string, and turns it into an array that is deliminated by ' '
 function toArray(string) {
-    var arr = string.split(' ');
-    return arr;
+    var arr = {};
+    return arr = string.split(' ');
 }
 
 function toList(arr) {
@@ -67,14 +67,19 @@ function lastTwo(list) {
 
 function testing(string1, string2) {
     // Everything to get the last two of the example string
+    // Everything to get a string of binary with the text given with length check and put it into an array
     var exampleString = textToBinary(string1);
     exampleString = binaryLengthCheck(exampleString);
-    var arr = [];
-    arr = toArray(exampleString);
+    exampleString = toArray(exampleString);
+    console.log(`exampleString:\n${exampleString}`);
+
+    /*
     arr = lastTwo(arr);
     exampleString = toList(arr);
     exampleString = exampleString.split(' ').join('');
     console.log(`exampleString:\n${exampleString}`);
+    */
+    
 
     // Everything to get secretMessage up to 8 bits and into a string with no spaces
     var secretMessage = textToBinary(string2);
@@ -83,10 +88,16 @@ function testing(string1, string2) {
     console.log(`secretMessage:\n${secretMessage}`);
 
     // Everything to put n characters of secretMessage onto example string, includes one @ symbol to signal a stop
+    /*
     var encodedMessage = '';
     encodedMessage = secretMessage.substring(0, secretMessage.length) + '@' + exampleString.substring(secretMessage.length);
     console.log(`encodedMessage:\n${encodedMessage}`);
-    
+    */
+
+    // Testing
+    // Everything to take the list of binary from example string, iterate through that, append the secret message two bits at a time with secretMessage, and return a list of exampleMessage binary sequences
+
+
     return 'end';
 }
 
