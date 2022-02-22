@@ -1,16 +1,3 @@
-/* This file is to:
-    Encode
-    DONE - Convert input text to binary
-    DONE - Take the binary, make sure it is the correct length of 8, if not add 0's to the beginning
-    DONE - Take the binary given, seperate the last two bits
-    DONE - Convert the last two bits to a string 
-    DONE - Take that string, overwrite it with the text to encode with some sort of stop character
-    - Split it into groups of two again
-    - Append that to the end of the original binary
-*/
-
-/*--------------------------------------------------------------------------------*/
-
 /*    To Array    */
 //  Takes a string, and turns it into an array that is deliminated by ' '
 function toArray(string) {
