@@ -17,8 +17,8 @@ function toList(arr) {
 
 /*    Text to Binary    */
 //  Function that takes a string as input, outputs a binary conversion
-function textToBinary(string) {
-    return string.split('').map(function (char) {
+function textToBinary(str) {
+    return str.split('').map(function (char) {
         return char.charCodeAt(0).toString(2);
     }).join(' ');
 }
@@ -91,7 +91,7 @@ function encodeString(string1, string2) {
     secretMessage = toArray(secretMessage);
     secretMessage = binaryLengthCheck(secretMessage);
     secretMessage = intoTwo(secretMessage);
-    secretMessage = secretMessage.slice(0,-1);
+    secretMessage.pop();
     
     console.log('secretMessage');
     console.log(secretMessage);
