@@ -58,6 +58,7 @@ function replace (arr1, arr2) {
         temp = arr1[i].slice(0, -2) + arr2[i];
         arr1[i] = temp;
     }
+    arr1.splice(arr2.length, 0, '11111111');
     return arr1;
 }
 
