@@ -37,21 +37,6 @@ function binaryLengthCheck(list) {
     return arr;
 }
 
-/*    Last Two    */
-// Function that takes the last two bits from a binary sequence of 8
-function lastTwo(list) {
-    const n = 2;    // Last 2 bits we want
-    var s = '';     // String to put the last two digits into
-    
-    for(var i = 0; i < list.length; i++) {
-        var str = list[i];
-        s += str.substring(str.length - n) + ' ';
-    }
-    s = toArray(s);
-    s.pop();        // Removes last entry from the line just for cleaning ('')
-    return s;
-}
-
 /*    intoTwo    */
 // Function that takes string of straight binary from binaryLengthCheck
 function intoTwo (arr) {
@@ -105,4 +90,3 @@ function encodeString(string1, string2) {
 
 console.log(encodeString('Hello, World', 'Me'));
 //  console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
-
