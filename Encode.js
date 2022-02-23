@@ -70,8 +70,8 @@ function encodeString(string1, string2) {
     textToEncode = toArray(textToEncode);
     textToEncode = binaryLengthCheck(textToEncode);
     
-    console.log('textToEncode');
-    console.log(textToEncode);
+    //      console.log('textToEncode');
+    //      console.log(textToEncode);
 
     // Everything to get secretMessage up to 8 bits and into arr of 2 bits per each element
     var secretMessage = textToBinary(string2);
@@ -80,8 +80,8 @@ function encodeString(string1, string2) {
     secretMessage = intoTwo(secretMessage);
     secretMessage.pop();
     
-    console.log('secretMessage');
-    console.log(secretMessage);
+    //      console.log('secretMessage');
+    //      console.log(secretMessage);
 
     // Everything to take the array of binary from example string, iterate through that, append the secret message two bits at a time with secretMessage, and return a list of exampleMessage binary sequences
     console.log('Replaced:');
@@ -90,5 +90,6 @@ function encodeString(string1, string2) {
     return 'end';
 }
 
+// Tests
 console.log(encodeString('Hello, World', 'Me'));
-//  console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
+// console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
