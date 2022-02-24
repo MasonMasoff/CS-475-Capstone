@@ -16,6 +16,7 @@ function find(arr) {
 
 /*    lastTwo    */
 //  Helper function to return the last n bits of each element of an array of binary sequences
+// EX: ['10110101','00101110'] TO ['01','10']
 function lastTwo(arr) {
     const n = 2;    // Last n bits we want
     var s = '';     // String to put the last two digits into
@@ -25,8 +26,19 @@ function lastTwo(arr) {
     }
     s = toArray(s, ' ');
     s.pop();
-    
+
     return s;
+}
+
+/*    intoEights    */
+//  Helper function that helps sort an array with multiple sets of 2 binary values into strings with length 8
+// EX: ['01', '00', '11','01', '01', '10','01', '01'] TO ['01001101','01100101']
+function intoEights(arr) {
+    var str = arr.toString();
+    str = str.replaceAll(',', '');
+    
+
+    return arr;
 }
 
 /*    getEncodedMessage    */
@@ -34,9 +46,12 @@ function lastTwo(arr) {
 function getEncodedMessage(arr) {
     arr = arr.slice(0, find(arr));
     arr = lastTwo(arr);
+    arr = intoEights(arr);
 
     return arr;
 }
+
+
 
 function decodeString(str) {
     var arr = toArray(str, ',');
