@@ -94,4 +94,5 @@ function encodeString(string1, string2) {
 
 // Tests
 console.log(encodeString('Hello, World', 'Me'));
-// console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
+console.log(encodeString('Hello, this is the text that I want to encode with a secret message', 'Ooga Booga'));
+console.log(encodeString('This is a test message for test 3', 'Suh dude'));
