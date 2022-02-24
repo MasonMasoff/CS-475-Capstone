@@ -84,7 +84,7 @@ function encodeString(string1, string2) {
     //      console.log(secretMessage);
 
     // Everything to take the array of binary from example string, iterate through that, append the secret message two bits at a time with secretMessage, and return a list of exampleMessage binary sequences
-    console.log('Replaced:');
+    console.log('Encoded Message:');
     console.log(replace(textToEncode, secretMessage));
 
     return 'end';
