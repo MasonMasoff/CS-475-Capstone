@@ -34,10 +34,9 @@ function lastTwo(arr) {
 //  Helper function that helps sort an array with multiple sets of 2 binary values into strings with length 8
 // EX: ['01', '00', '11','01', '01', '10','01', '01'] TO ['01001101','01100101']
 function intoEights(arr) {
-    var str = arr.toString();
-    str = str.replaceAll(',', '');
+    var arr = arr.join('');
+    arr = arr.match(/.{1,8}/g);
     
-
     return arr;
 }
 
@@ -51,11 +50,35 @@ function getEncodedMessage(arr) {
     return arr;
 }
 
+/*    binaryArrayToDecimal    */
+//  Function that takes an array of binary values, returns that list in decimal form
+function binaryArrayToDecimal(arr) {
+    var s = '';
+    for (var i = 0; i < arr.length; i++) {
+        s += binaryToDecimal(arr[i]) + ' ';
+    }
+    return s;
+}
 
+/*    binaryToDecimal    */
+//  Helper function that takes binary as input, outputs a decimal conversion
+function binaryToDecimal(string) {
+    let decimal = +0;
+    let bits = +1;
+    for(let i = 0; i < string.length; i++) {
+        let currNum = +(string[string.length - i - 1]);
+        if(currNum === 1) {
+            decimal += bits;
+        }
+        bits *= 2;
+    }
+    return(decimal);
+}
 
 function decodeString(str) {
     var arr = toArray(str, ',');
     arr = getEncodedMessage(arr);
+    arr = binaryArrayToDecimal(arr);
 
     console.log(arr);
 }
