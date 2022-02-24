@@ -1,9 +1,14 @@
-/* This file is to:
-    Decode
-    - Take the binary given from Encode
-    - Strip it down to the last two bits of each 8 bit binary set
-    - Put that into a single string
-    - Seperate it into 8 bits
-    - Translate those 8 bits into text
-    - Return the text to the user
-*/
+/*    toArray    */
+//  Takes a string, and turns it into an array that is deliminated by ','
+function toArray(str) {
+    var arr = {};
+    return arr = str.split(',');
+}
+
+function decodeString(string) {
+    var arr = toArray(string);
+
+    console.log(arr);
+}
+
+decodeString('01001001,01100100,01101111,01101101,01101101,00101110,00100001,01010101,11111111,01101111,01110010,01101100,01100100')
