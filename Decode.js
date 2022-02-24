@@ -85,6 +85,9 @@ function decimalToASCII(arr) {
     return str;
 }
 
+/*    decodeString    */
+//  Function that takes a string of binary, gets the last 2 bits from it, puts them into groupings of 8 bits, converts it to text, and prints it to the console
+
 function decodeString(str) {
     var decodedString = '';
     var arr = toArray(str, ',');
