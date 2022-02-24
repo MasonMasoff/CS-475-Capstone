@@ -1,12 +1,12 @@
 /*    toArray    */
 //  Takes a string, and turns it into an array that is deliminated by ','
-function toArray(str) {
+function toArray(str, delim) {
     var arr = {};
     return arr = str.split(',');
 }
 
 function decodeString(string) {
-    var arr = toArray(string);
+    var arr = toArray(string, ',');
 
     console.log(arr);
 }
