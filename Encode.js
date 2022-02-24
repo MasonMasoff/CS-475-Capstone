@@ -38,7 +38,7 @@ function binaryLengthCheck(list) {
 }
 
 /*    intoTwo    */
-// Function that takes string of straight binary from binaryLengthCheck
+// Function that takes string of straight binary from binaryLengthCheck and gets the last 2 digits
 function intoTwo (arr) {
     var str = arr.toString().replace(/,/g,'');
     var s = ''
