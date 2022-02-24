@@ -89,7 +89,7 @@ function encodeString(string1, string2) {
     //      console.log('Encoded Message:');
     //      console.log(encodedMessage));
 
-    return encodedMessage;
+    return encodedMessage.toString();
 }
 
 // Tests
