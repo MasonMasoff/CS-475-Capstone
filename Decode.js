@@ -2,6 +2,7 @@
 //  Takes a string, and turns it into an array that is deliminated by ','
 function toArray(str, delim) {
     var arr = {};
+    
     return arr = str.split(delim);
 }
 
@@ -57,6 +58,7 @@ function binaryArrayToDecimal(arr) {
     for (var i = 0; i < arr.length; i++) {
         s += binaryToDecimal(arr[i]) + ' ';
     }
+    
     return s;
 }
 
@@ -72,6 +74,7 @@ function binaryToDecimal(string) {
         }
         bits *= 2;
     }
+    
     return(decimal);
 }
 
@@ -82,12 +85,12 @@ function decimalToASCII(arr) {
     for (var i = 0; i < arr.length; i++) {
         str += String.fromCharCode(arr[i]);
     }
+    
     return str;
 }
 
 /*    decodeString    */
 //  Function that takes a string of binary, gets the last 2 bits from it, puts them into groupings of 8 bits, converts it to text, and prints it to the console
-
 function decodeString(str) {
     var decodedString = '';
     var arr = toArray(str, ',');
@@ -108,5 +111,3 @@ console.log(decodeString(test1))
 console.log(decodeString(test2))
 console.log(decodeString(test3))
 console.log(decodeString(test4))
-
-
